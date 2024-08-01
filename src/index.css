@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    
+body{
+  /* font-family: gilroy; */
+  font-family: 'Rajdhani', sans-serif;
+  background: #ECEEEC;
+}
+.nav{
+  background-color: #A58A6D;
+}
+
