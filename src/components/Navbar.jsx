@@ -3,6 +3,9 @@ import pic from '../../public/hacker.avif'
 import { Link } from 'react-scroll'
 
 function Navbar() {
+
+    const [bulb, setbulb] = useState(false);
+
     const [menu, setmenu] = useState(false)
     const navItem = [
         {
@@ -26,6 +29,7 @@ function Navbar() {
             text: 'Contact'
         }
     ]
+
   return (  
     <>
     <div className='nav max-w-screen-2xl mx-auto container px-4 md:px-20 shadow-md h-16   fixed top-0 right-0 left-0 z-50  bg-white'>
@@ -59,7 +63,7 @@ function Navbar() {
                 </ul>
                 <div onClick={()=>setmenu(!menu)} className='text-2xl cursor-pointer md:hidden'>
                     {
-                    menu?<span className='text-4xl'>&times;</span> :<span>&#9776;</span>
+                        menu?<span className='text-4xl'>&times;</span> :<span>&#9776;</span>
                     }
                 </div>
             </div>
