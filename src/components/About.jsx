@@ -4,23 +4,23 @@ function About() {
     const data =[
         {
             deadline:"Education & Training",
-            para:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, magnam asperiores at eligendi adipisci quos odit quia officiis accusamus quibusdam quasi obcaecati dolorem saepe architecto"
+            para:"A comprehensive blend of web development education and hands-on training, encompassing key technologies such as HTML, CSS, JavaScript, and the MERN stack, alongside practical experience in real-world projects and internships."
         },
         {
             deadline:"Skill & Expertise",
-            para:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, magnam asperiores at eligendi adipisci quos odit quia officiis accusamus quibusdam quasi obcaecati dolorem saepe architecto"
+            para:"Proficient in web development with expertise in HTML, CSS, JavaScript, and the MERN stack. Experienced in creating dynamic, user-friendly interfaces and completing projects like a Doctor management system and Swiggy UI."
         },
         {
             deadline:"Professional Experience",
-            para:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, magnam asperiores at eligendi adipisci quos odit quia officiis accusamus quibusdam quasi obcaecati dolorem saepe architecto"
+            para:"Completed a virtual internship at CodSoft, focusing on web development with html, css, and JavaScript. Developed a Work Studio project using ReactJS and created a Pinterest clone using the MERN stack."
         },
         {
             deadline:"Achivements & Rewards",
-            para:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, magnam asperiores at eligendi adipisci quos odit quia officiis accusamus quibusdam quasi obcaecati dolorem saepe architecto"
+            para:"Achieved HackerRank certification in Java, CodeChef certification in JavaScript, and CodSoft virtual internship certification. Additionally, earned a C++ certification from SkillUp and numerous other certificates in various programming languages and technologies."
         },
         {
             deadline:"Misson Statement",
-            para:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, magnam asperiores at eligendi adipisci quos odit quia officiis accusamus quibusdam quasi obcaecati dolorem saepe architecto"
+            para:"To master Java programming and develop strong data structures and algorithms skills, aiming to build efficient, scalable, and high-performance solutions for complex problems."
         }, 
     ]
 
@@ -29,7 +29,7 @@ function About() {
     <div name="About" 
     className='max-w-screen-2xl mx-auto container px-4 md:px-20 my-20'>
         <h1 className='text-2xl mb-5'>About</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, magnam asperiores at eligendi adipisci quos odit quia officiis accusamus quibusdam quasi obcaecati dolorem saepe architecto nulla dolores cumque temporibus non! Vero, numquam! Aliquam, molestias voluptatum!</p>
+        <p>Aspiring Full Stack development with MERN technologies(MongoDB,Express.js,React.js,Node.js). Experienced in creating dynamic web applications, including a Pinterest clone and Swiggy UI, with a strong foundation in DSA.</p>
     
     <br />
     {

@@ -33,7 +33,10 @@ function Home() {
                 />
             </div>
             <br />
-            <p className='text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque reiciendis voluptas repellendus dignissimos esse architecto ex illo, itaque non aut, enim nihil nostrum ratione dolorem eos? Modi consequatur recusandae et.</p>
+            <p className='text-justify'>Proficient in Java and the MERN stack (MongoDB, Express.js, React.js, Node.js), I specialize in
+             developing dynamic web applications and robust backend systems. With a strong focus on
+             performance, security, and scalability, I am dedicated to delivering high-quality software
+             solutions that meet and exceed client expectations.</p>
             <br />
 
             {/* social media icons */}
