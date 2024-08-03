@@ -14,7 +14,7 @@ function Contact() {
         message:data.message,
       }
       try {
-       await axios.post("https://getform.io/f/avrezdna",userInfo)
+       await axios.post("https://getform.io/f/bjjedpkb",userInfo)
        toast.success("Yahoo! message has been sent");
       } catch (error) {
         console.log(error);
