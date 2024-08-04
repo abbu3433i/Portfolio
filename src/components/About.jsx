@@ -1,6 +1,9 @@
-import React from 'react'
+import { motion } from 'framer-motion'
+import React, { useState } from 'react'
 
 function About() {
+    motion
+    const [isOpen, setIsOpen] = useState(false);
     const data =[
         {
             deadline:"Education & Training",
@@ -32,18 +35,29 @@ function About() {
         <p>Aspiring Full Stack development with MERN technologies(MongoDB,Express.js,React.js,Node.js). Experienced in creating dynamic web applications, including a Pinterest clone and Swiggy UI, with a strong foundation in DSA.</p>
     
     <br />
+    
     {
         data.map((elem,i)=>{
             return (
                 <>
                 <h1 key={i} className='text-green-600 font-semibold text-xl'>{elem.deadline}</h1>
-                <span key={i}>{elem.para}</span>
+
+                <motion.span
+                layout
+                data-isOpen={isOpen}
+                initial={{ borderRadius: 5 }}
+                className="parent overflow-hidden p-5 cursor-pointer hover:bg-slate-800 text-white "
+                onClick={() => setIsOpen(!isOpen)}
+
+                 key={i}>{elem.para} 
+                 </motion.span>
                 <br />
                 <br />
                 </>
             )
         })
     }
+
 
     </div>
     {/* <hr /> */}

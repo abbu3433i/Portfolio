@@ -8,7 +8,12 @@ import Footer from './components/Footer'
 import Contact from './components/Contact'
 import { Toaster } from 'react-hot-toast'
 
+import LocomotiveScroll from 'locomotive-scroll';
+
 function App() {
+
+const locomotiveScroll = new LocomotiveScroll();
+
   return (
     <>
    <div>

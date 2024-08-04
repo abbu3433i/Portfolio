@@ -13,8 +13,10 @@ import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 
 import { ReactTyped} from "react-typed";
+import { motion } from 'framer-motion';
 
 function Home() {
+    motion
   return (
     <>
     <div name="Home" 
@@ -83,7 +85,13 @@ function Home() {
             </div> {/* upar bale 1/2 ka div he */}
 
             <div className='md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1 flex justify-center align-middle items-center'>
-            <img src={pic} className='rounded-full md:w-[400px] md:h-[450px]' alt="" />
+            <motion.span initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+        duration: 1,
+        delay: 0.5,
+        ease: [0, 0.71, 0.2, 1.01] }}> 
+        <img src={pic} className='rounded-full md:w-[400px] md:h-[450px]' alt="" /></motion.span>
             </div>
         </div>
     </div>
