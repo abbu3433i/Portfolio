@@ -1,9 +1,7 @@
-import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 
 function About() {
-    motion
-    const [isOpen, setIsOpen] = useState(false);
+
     const data =[
         {
             deadline:"Education & Training",
@@ -41,16 +39,7 @@ function About() {
             return (
                 <>
                 <h1 key={i} className='text-green-600 font-semibold text-xl'>{elem.deadline}</h1>
-
-                <motion.span
-                layout
-                data-isOpen={isOpen}
-                initial={{ borderRadius: 5 }}
-                className="parent overflow-hidden p-5 cursor-pointer hover:bg-slate-800 text-white "
-                onClick={() => setIsOpen(!isOpen)}
-
-                 key={i}>{elem.para} 
-                 </motion.span>
+                <span key={i}> {elem.para} </span>
                 <br />
                 <br />
                 </>
