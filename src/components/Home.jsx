@@ -1,6 +1,6 @@
 import React from 'react'
 
-import pic from '../../public/abhishek.jpg'
+import pic from '../../public/dp.png'
 
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
@@ -91,7 +91,7 @@ function Home() {
         duration: 1,
         delay: 0.5,
         ease: [0, 0.71, 0.2, 1.01] }}> 
-        <img src={pic} className='rounded-full md:w-[400px] md:h-[450px]' alt="" /></motion.span>
+        <img src={pic} className='rounded-full md:w-[400px] md:h-[450px] shadow-lg' alt="" /></motion.span>
             </div>
         </div>
     </div>
