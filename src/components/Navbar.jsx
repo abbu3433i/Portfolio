@@ -1,8 +1,30 @@
 import React, { useState } from 'react'
 import pic from '../../public/hacker.avif'
 import { Link } from 'react-scroll'
+import { delay, motion } from 'framer-motion';
 
 function Navbar() {
+motion
+
+    const variants ={
+    open:{
+        clipPath:"circle(1200px at 50px 50px)",
+        transition:{
+            type:"spring",
+            stiffness:20,
+        },
+    },
+    closed:{
+        clipPath:"circle(30px at 50px 50px)",
+        transition:{
+            delay:0.5,
+            type:"spring",
+            stiffness:400,
+            damping:40
+        },
+    },
+    };
+
 
     const [bulb, setbulb] = useState(false);
 
@@ -35,12 +57,16 @@ function Navbar() {
     <div className='nav max-w-screen-2xl mx-auto container px-4 md:px-20 shadow-md h-16   fixed top-0 right-0 left-0 z-50  bg-white'>
         <div className='flex justify-between items-center h-16'>
 
-            <div className='flex space-x-2 '>
+            <motion.div 
+            initial={{opacity:0,scale:0.5}}
+            animate={{opacity:1,scale:1}}
+            transition={{duration:0.5}}
+            className='flex space-x-2 '>
                 <img src={pic} className='h-12 w-12 rounded-full' alt="" />
                 <h1 className='font-semibold text-xl cursor-pointer'>Abhishe<span className='text-gray-600 text-2xl'>k</span>
                 <p className='text-sm'>Web Developer</p>
                 </h1>
-            </div>
+            </motion.div>
 
             {/* desktop navbar */}
             <div>

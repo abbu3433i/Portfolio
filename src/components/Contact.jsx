@@ -1,9 +1,22 @@
 import axios from 'axios'
+import { motion } from 'framer-motion'
 import React from 'react'
 import { useForm } from "react-hook-form"
 import toast from 'react-hot-toast'
 
 function Contact() {
+  const slideVariant = {
+    initial:{
+        x:-500,
+        opacity:0
+    },
+    animate:{
+        x:0,
+        opacity:1,
+        transition:{duration:1},
+    }
+}
+  motion
 // ye do line form ki field required honi chahiye isliye likhin hen
     const { register, handleSubmit,watch,formState:{errors} } = useForm()
 
@@ -28,7 +41,7 @@ function Contact() {
      className='max-w-screen-2xl mx-auto container px-4 md:px-20 my-16'>
         <h1 className='text-3xl font-bold mb-4'>Contact Me</h1>
         <span>Please fill out the form below to contact me</span>
-        <div className='flex flex-col justify-center items-center mt-5 md:justify-around md:flex md:flex-row'>
+        <motion.div variants={slideVariant} initial="initial" whileInView="animate" className='flex flex-col justify-center items-center mt-5 md:justify-around md:flex md:flex-row'>
 
   
                         <div className='mb-8'>
@@ -47,8 +60,6 @@ function Contact() {
                           </div>
 
                         </div>
-
-
             <form 
             onSubmit={handleSubmit(onSubmit)}
             // action="https://getform.io/f/avrezdna" 
@@ -95,8 +106,8 @@ function Contact() {
                 <button type='submit'
                  className='bg-slate-700 text-white hover:bg-black px-4 py-1 rounded-xl mt-2'>Send</button>
             </form>
+    </motion.div>
         </div>
-    </div>
     </>
   )
 }

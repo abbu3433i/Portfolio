@@ -1,7 +1,17 @@
-import React, { useState } from 'react'
+import { animate, motion } from 'framer-motion'
+import React, { useRef, useState } from 'react'
 
 function About() {
+motion
 
+    const variants = {
+        animate:(i)=>({
+            opacity:1,
+            y:0,
+            transition:{duration:0.2,staggerChildren:2,delay:1},
+        }),
+        initial:{opacity:0,y:-100}
+    }
     const data =[
         {
             deadline:"Education & Training",
@@ -26,22 +36,24 @@ function About() {
     ]
 
   return (
-    <>
     <div name="About" 
-    className='max-w-screen-2xl mx-auto container px-4 md:px-20 my-20'>
+    className='max-w-screen-2xl mx-auto container px-4 md:px-20 my-20 cursor-pointer'>
+        <motion.div initial="initial" variants={variants} whileInView="animate">
         <h1 className='text-2xl mb-5'>About</h1>
         <p>Aspiring Full Stack development with MERN technologies(MongoDB,Express.js,React.js,Node.js). Experienced in creating dynamic web applications, including a Pinterest clone and Swiggy UI, with a strong foundation in DSA.</p>
-    
+        </motion.div>
     <br />
     
     {
         data.map((elem,i)=>{
             return (
                 <>
+                <motion.div initial="initial" variants={variants} whileInView="animate">
                 <h1 key={i} className='text-green-600 font-semibold text-xl'>{elem.deadline}</h1>
-                <span key={i}> {elem.para} </span>
+                <motion.span variants={variants} key={i}> {elem.para} </motion.span>
                 <br />
                 <br />
+                </motion.div>
                 </>
             )
         })
@@ -49,8 +61,6 @@ function About() {
 
 
     </div>
-    {/* <hr /> */}
-    </>
   )
 }
 

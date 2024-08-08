@@ -13,18 +13,34 @@ import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 
 import { ReactTyped} from "react-typed";
-import { motion } from 'framer-motion';
+import { animate, motion } from 'framer-motion';
 
 function Home() {
+    const textVariants = {
+        initial:{
+            x:-500,
+            opacity:0
+        },
+        animate:{
+            x:0,
+            opacity:1,
+            transition:{duration:1,staggerChildren:0.1},
+        }
+    }
+
     motion
   return (
     <>
     <div name="Home" 
-    className='max-w-screen-2xl mx-auto container px-4 md:px-20 my-20'>
+    className='home max-w-screen-2xl mx-auto container px-4 md:px-20 my-20'>
         <div className='flex flex-col md:flex-row'>
-            <div className='md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1'>
-            <span>Welcome In My Feed</span>
-            <div className='flex space-x-1 text-2xl md:text-4xl'>
+            <motion.div
+            variants={textVariants} 
+            initial="initial" 
+            animate="animate" 
+            className='md:w-1/2 mt-12 md:mt-24 space-y-2 order-2 md:order-1'>
+            <motion.span variants={textVariants}>Welcome In My Feed</motion.span>
+            <motion.div variants={textVariants} className='flex space-x-1 text-2xl md:text-4xl'>
                 <h1>Hello I am a</h1>
                 {/* <span className='text-red-700'>Devloper</span> */}
                 <ReactTyped className='text-red-700'
@@ -33,16 +49,16 @@ function Home() {
                 backSpeed={50}
                 loop={true}
                 />
-            </div>
+            </motion.div>
             <br />
-            <p className='text-justify'>Proficient in Java and the MERN stack (MongoDB, Express.js, React.js, Node.js), I specialize in
+            <motion.p variants={textVariants} className='text-justify'>Proficient in Java and the MERN stack (MongoDB, Express.js, React.js, Node.js), I specialize in
              developing dynamic web applications and robust backend systems. With a strong focus on
              performance, security, and scalability, I am dedicated to delivering high-quality software
-             solutions that meet and exceed client expectations.</p>
+             solutions that meet and exceed client expectations.</motion.p>
             <br />
 
             {/* social media icons */}
-            <div className='flex flex-col md:flex-row space-y-6 md:space-y-0 items-center justify-between'>
+            <motion.div variants={textVariants} className='flex flex-col md:flex-row space-y-6 md:space-y-0 items-center justify-between'>
             <div className='space-y-2'>
             <h1>Available on</h1>
             <ul className='flex space-x-5'>
@@ -69,8 +85,10 @@ function Home() {
             </ul>
             </div>
 
-            <div className='space-y-2'>
-            <h1>M <span> E</span> R<span> N</span></h1>
+    <div className='overflow-hidden w-[40%]'>
+        <marquee behavior="infinity" direction="right">
+            <div className='space-y-2 object-cover'>
+            <h1>M <span> E</span> R<span> N</span></h1> 
             <div className='flex space-x-5'>
             <SiMongodb className='text-3xl hover:scale-125 duration-200' />
             <SiExpress className='text-3xl hover:scale-125 duration-200' />
@@ -78,20 +96,19 @@ function Home() {
             <FaNodeJs className='text-3xl hover:scale-125 duration-200' />
             </div>
             </div>
+            </marquee>
+   </div>
+            </motion.div>
 
-
-            </div>
-
-            </div> {/* upar bale 1/2 ka div he */}
+            </motion.div> {/* upar bale 1/2 ka div he */}
 
             <div className='md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1 flex justify-center align-middle items-center'>
-            <motion.span initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-        duration: 1,
-        delay: 0.5,
-        ease: [0, 0.71, 0.2, 1.01] }}> 
-        <img src={pic} className='rounded-full md:w-[400px] md:h-[450px] shadow-lg' alt="" /></motion.span>
+            <motion.span 
+            initial={{ opacity: 0, x: 500 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{duration: 2, ease: [0, 0.71, 0.2, 1.01] }}
+            > 
+        <img src={pic} className='rounded-full w-[250px] h-[300px] md:w-[330px] md:h-[400px] shadow-lg' alt="" /></motion.span>
             </div>
         </div>
     </div>
