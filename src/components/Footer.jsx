@@ -1,12 +1,29 @@
+import { motion } from 'framer-motion';
 import React from 'react'
 import { FaFacebook,FaTwitter,FaInstagram,FaLinkedinIn } from "react-icons/fa6";
 
 function Footer() {
+    const slidefoot = {
+        initial:{
+            y:100,
+            opacity:0
+        },
+        animate:{
+            y:0,
+            opacity:1,
+            transition:{duration:1},
+        }
+    }
+    motion
   return (
     <>
     <hr />
     <footer>
-        <div className='max-w-screen-2xl mx-auto container px-4 md:px-20 my-20'>
+        <motion.div
+        variants={slidefoot} 
+        initial="initial" 
+        whileInView="animate" 
+        className='max-w-screen-2xl mx-auto container px-4 md:px-20 my-20'>
             <div className='flex flex-col justify-center items-center'>
                 <div className='flex space-x-4'>
                     <a href="https://www.facebook.com/login/" target='blank'>
@@ -28,7 +45,7 @@ function Footer() {
                     <p className='text-sm'>Supportive partner ❤️Gopal </p>
                 </div>
             </div>
-        </div>
+        </motion.div>
     </footer>
     </>
   )
