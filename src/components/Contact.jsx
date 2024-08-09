@@ -7,7 +7,7 @@ import toast from 'react-hot-toast'
 function Contact() {
   const slideVariant = {
     initial:{
-        x:-500,
+        x:500,
         opacity:0
     },
     animate:{
@@ -41,7 +41,11 @@ function Contact() {
      className='max-w-screen-2xl mx-auto container px-4 md:px-20 my-16'>
         <h1 className='text-3xl font-bold mb-4'>Contact Me</h1>
         <span>Please fill out the form below to contact me</span>
-        <motion.div variants={slideVariant} initial="initial" whileInView="animate" className='flex flex-col justify-center items-center mt-5 md:justify-around md:flex md:flex-row'>
+        <motion.div 
+        variants={slideVariant} 
+        initial="initial" 
+        whileInView="animate" 
+        className='flex flex-col justify-center items-center mt-5 md:justify-around md:flex md:flex-row'>
 
   
                         <div className='mb-8'>
