@@ -5,21 +5,8 @@ import react from '../../public/react.jpeg'
 import node from '../../public/nodejs.png'
 import java from '../../public/java.png'
 import js from '../../public/js.png'
-import { motion } from 'framer-motion'
 
 function Portfolio() {
-    const cardVariants = {
-        initial:{
-            x:100,
-            opacity:0
-        },
-        animate:{
-            x:0,
-            opacity:1,
-            transition:{duration:1},
-        }
-    }
-    motion
     const cardItem = [
         {
             logo:mongo,
@@ -56,12 +43,7 @@ function Portfolio() {
     <>
     <div name="Portfolio" 
     className='max-w-screen-2xl mx-auto container px-4 md:px-20 mt-5'>
-        <motion.div
-        variants={cardVariants} 
-        initial="initial" 
-        // animate="animate"
-        whileInView="animate" 
-        >
+        <div>
             <h1 className='text-2xl mb-5'>Portfolio</h1>
             <span className='underline'>Featured Project</span>
 
@@ -70,7 +52,7 @@ function Portfolio() {
                     cardItem.map((elem,i)=>{
                         return (
                             <>
-                            <motion.div variants={cardVariants} key={i} className='md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-105 duration-300'>
+                            <div key={i} className='md:w-[300px] md:h-[300px] border-[2px] rounded-lg shadow-lg p-1 cursor-pointer hover:scale-105 duration-300'>
                                 <img src={elem.logo} className='w-[120px] h-[120px] rounded-full border-[2px] p-1' alt="" />
                                 <div>
                                     <h1 className='text-xl font-semibold px-2 mb-2'>{elem.name}</h1>
@@ -80,14 +62,14 @@ function Portfolio() {
                                     <button className='bg-blue-500 hover:bg-blue-700  text-white px-4 py-2 rounded font-semibold'>Video</button>
                                     <button className='bg-green-500 hover:bg-green-700  text-white px-4 py-2 rounded font-semibold'>Source code</button>
                                 </div>
-                            </motion.div>
+                            </div>
                             </>
                         )
                     })
                 }
             </div>
 
-        </motion.div>
+        </div>
     </div>
     </>
   )
