@@ -8,9 +8,9 @@ motion
         animate:(i)=>({
             opacity:1,
             y:0,
-            transition:{duration:0.2,staggerChildren:2,delay:1},
+            transition:{duration:1,staggerChildren:2},
         }),
-        initial:{opacity:0,y:-100}
+        initial:{opacity:0,y:-150}
     }
     const data =[
         {
@@ -38,7 +38,10 @@ motion
   return (
     <div name="About" 
     className='max-w-screen-2xl mx-auto container px-4 md:px-20 my-20 cursor-pointer'>
-        <motion.div initial="initial" variants={variants} whileInView="animate">
+        <motion.div 
+        initial="initial" 
+        variants={variants} 
+        whileInView="animate">
         <h1 className='text-2xl mb-5'>About</h1>
         <p>Aspiring Full Stack development with MERN technologies(MongoDB,Express.js,React.js,Node.js). Experienced in creating dynamic web applications, including a Pinterest clone and Swiggy UI, with a strong foundation in DSA.</p>
         </motion.div>

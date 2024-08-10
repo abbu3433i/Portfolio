@@ -7,7 +7,7 @@ import toast from 'react-hot-toast'
 function Contact() {
   const slideVariant = {
     initial:{
-        x:500,
+        x:-100,
         opacity:0
     },
     animate:{
