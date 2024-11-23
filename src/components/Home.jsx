@@ -1,6 +1,6 @@
 import React from 'react'
 
-import pic from '../../public/dp.png'
+import pic from '../../public/abhiii.png'
 
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
@@ -108,7 +108,7 @@ function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{duration: 2, ease: [0, 0.71, 0.2, 1.01] }}
             > 
-        <img src={pic} className='rounded-full w-[250px] h-[300px] md:w-[330px] md:h-[400px] shadow-lg' alt="" /></motion.span>
+        <img src={pic} className='rounded-full w-[250px] h-[300px] md:w-[300px] md:h-[400px] shadow-lg' alt="" /></motion.span>
             </div>
         </div>
     </div>
