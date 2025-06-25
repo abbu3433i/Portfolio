@@ -1,6 +1,6 @@
 import React from 'react'
 
-import pic from '../../public/abhiii.png'
+import pic from '../../public/dp.png'
 
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
